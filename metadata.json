@@ -1,0 +1,6 @@
+{
+  "name": "Creative Things to Do",
+  "description": "Creative task assignment, media upload, and workflow tracking board with role-based user registration and Admin approval management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

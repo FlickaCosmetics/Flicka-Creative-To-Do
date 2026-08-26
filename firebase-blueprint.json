@@ -1,0 +1,64 @@
+{
+  "entities": {
+    "Task": {
+      "title": "Task",
+      "description": "Creative tasks and deliverables",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "status": { "type": "string" },
+        "priority": { "type": "string" },
+        "monthKey": { "type": "string" }
+      }
+    },
+    "User": {
+      "title": "User",
+      "description": "User accounts for team collaboration",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string" }
+      }
+    },
+    "Member": {
+      "title": "Member",
+      "description": "Team member profile",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" }
+      }
+    },
+    "Tag": {
+      "title": "Tag",
+      "description": "Category tags",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/tasks/{taskId}": {
+      "schema": "Task",
+      "description": "Shared tasks"
+    },
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Shared users"
+    },
+    "/members/{memberId}": {
+      "schema": "Member",
+      "description": "Team roster"
+    },
+    "/tags/{tagId}": {
+      "schema": "Tag",
+      "description": "Tags list"
+    }
+  }
+}
